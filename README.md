@@ -7,15 +7,13 @@
 3. Deploy the environment.
 
    ```shell
-   pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+   pip3 install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
    ```
 
-4. Change mode, run `chmod u+x data_preprocess.py train.py test.py label_visualization.py`
+4. Data preprocess, run `python3 data_preprocess.py`.
 
-5. Data preprocess, run ` ./data_preprocess.py`.
+5. Training the data, run `python3 train.py`.
 
-6. Training the data, run `./train.py`.
+6. Testing the result, run `python3 test.py`.
 
-7. Testing the result, run `./test.py`.
-
-8. Visualize the result, run `./label_visualization.py`.
+7. Visualize the result, run `python3 label_visualization.py`.
