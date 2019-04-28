@@ -2,7 +2,7 @@
 
 1. Download [original data](https://pan.baidu.com/s/1vRBgHBudaplr4RNyVieaJw) to this directory. PWD: **2ba5**
 
-2. DIY your dataset, run `sh make_dataset.sh`
+2. Make original dataset, run `sh make_dataset.sh`
 
 3. Deploy the environment.
 
@@ -12,7 +12,7 @@
 
 4. Data preprocess, run `python3 data_preprocess.py`.
 
-5. Copy *original/images* and *original/labels* to *train/train_labels*, *val/val_labels* and *test* directory. (Must be pairly copy)
+5. DIY your dataset, run `sh DIY_dataset.sh`
 
 6. Training the data, run `python3 train.py`.
 
