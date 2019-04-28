@@ -1,6 +1,6 @@
 ## Usage
 
-1. Make new directories, run `sh mkdir.sh`
+1. Create folders, run `sh mkdir.sh`
 
 2. Put [original data](https://pan.baidu.com/s/1vRBgHBudaplr4RNyVieaJw) in *data/original/images*, and then copy the file to *data/original/labels*. PWD: **2ba5**
 
