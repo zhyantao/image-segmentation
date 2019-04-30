@@ -1,21 +1,50 @@
-## Usage
+# OCT Image Segmentation
 
-1. Download [original data](https://pan.baidu.com/s/1vRBgHBudaplr4RNyVieaJw) to this directory. PWD: **2ba5**
+## Dependencies
 
-2. Make original dataset, run `sh make_dataset.sh`
-
-3. Deploy the environment.
-
+- CentOS 7
+- Python 3.6.5
+- Deploy the environment.
    ```shell
-   pip3 install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+   pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
    ```
 
-4. Data preprocess, run `python3 data_preprocess.py`.
+## Usage
 
-5. DIY your dataset, run `sh DIY_dataset.sh`
+### Data Preprocess
 
-6. Training the data, run `python3 train.py`.
+- Download [original data](https://pan.baidu.com/s/1vRBgHBudaplr4RNyVieaJw) to `seg-retinal/`. PWD: **2ba5**
 
-7. Testing the result, run `python3 test.py`.
+- Make original dataset, run command:
+  `sh make_dataset.sh`
+  
+- Data preprocess, run command:
+  `python data_preprocess.py`.
+  
+- DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:
+  `sh DIY_dataset.sh`
 
-8. Visualize the result, run `python3 label_visualization.py`.
+### Training model
+
+```shell
+python train.py
+```
+
+### Test model
+
+```shell
+python test.py
+```
+
+### Visualize the result
+
+```shell
+python label_visualization.py
+```
+
+
+> References:  
+>  
+> 1. [Deep-Learning Based, Automated Segmentation of Macular Edema in Optical Coherence Tomography](https://www.biorxiv.org/content/biorxiv/early/2017/05/09/135640.full.pdf)  
+> 2. [uw-biomedical-ml/irf-segmenter](https://github.com/uw-biomedical-ml/irf-segmenter)  
+> 3. [wuyang0329/unet](https://github.com/wuyang0329/unet)
