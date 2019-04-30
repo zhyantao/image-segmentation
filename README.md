@@ -24,7 +24,7 @@ pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trus
   
 - Data preprocess, run command:
 
-  `python data_preprocess.py`.
+  `python data_preprocess.py`
   
 - DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:
 
