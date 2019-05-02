@@ -51,5 +51,5 @@ python label_visualization.py
 ## References:
  
 1. [Deep-Learning Based, Automated Segmentation of Macular Edema in Optical Coherence Tomography](https://www.biorxiv.org/content/biorxiv/early/2017/05/09/135640.full.pdf)  
-2. [uw-biomedical-ml/irf-segmenter](https://github.com/uw-biomedical-ml/irf-segmenter)  
+2. [Relationship Between a Systemic Inflammatory Marker, Plaque Inflammation, and Plaque Characteristics Determined by Intravascular Optical Coherence Tomography](https://www.ahajournals.org/doi/pdf/10.1161/ATVBAHA.107.145987)
 3. [wuyang0329/unet](https://github.com/wuyang0329/unet)
