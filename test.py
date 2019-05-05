@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from model_v3 import *
+from model_v2 import *
 from data import *
 import numpy as np
 import cv2
@@ -36,10 +36,10 @@ if __name__ == '__main__':
     # save the predict images
     save_path = "data/predict/"
 
-    dp = data_preprocess(test_path=test_path,save_path=save_path,flag_multi_class=False,num_classes=2)
+    dp = data_preprocess(test_path=test_path,save_path=save_path,flag_multi_class=True,num_classes=3)
 
     #load model
-    model = load_model('weights/model_v3.hdf5')
+    model = load_model('weights/model_v2.hdf5')
 
     for name in os.listdir(test_path):
         image_path = os.path.join(test_path,name)
