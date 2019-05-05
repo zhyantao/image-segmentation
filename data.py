@@ -9,9 +9,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-white_color = [255, 255, 255]
-black_color = [0, 0, 0]
-COLOR_DICT = np.array([white_color, black_color])
+color_label = [1, 1, 1]
+color_nlabel = [2, 2, 2]
+color_background = [0, 0, 0]
+COLOR_DICT = np.array([color_label, color_nlabel, color_background])
 
 
 class data_preprocess:
@@ -19,8 +20,8 @@ class data_preprocess:
                  valid_path=None,valid_image_folder =None,valid_label_folder = None,
                  test_path=None, save_path=None,
                  img_rows=512, img_cols=512,
-                 flag_multi_class=False,
-                 num_classes = 2):
+                 flag_multi_class=True,
+                 num_classes = 3):
         self.img_rows = img_rows
         self.img_cols = img_cols
         self.train_path = train_path
@@ -145,8 +146,8 @@ class data_preprocess:
                     for j in range(len(img[k])):
                         num = img[k][j]
                         if num < (threshold/255.0):
-                            img_std[k][j] = black_color
+                            img_std[k][j] = color_background
                         else:
-                            img_std[k][j] = white_color
+                            img_std[k][j] = color_label
             img_std = cv2.resize(img_std, size, interpolation=cv2.INTER_CUBIC)
             cv2.imwrite(os.path.join(self.save_path, ("%s_predict." + self.img_type) % (name)), img_std)

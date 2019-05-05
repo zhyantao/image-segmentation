@@ -1,7 +1,7 @@
 #encoding:utf-8
 #!/usr/bin/env python3
 
-from model_v3 import  *
+from model_v2 import  *
 from data import *
 import os
 import keras
@@ -26,8 +26,8 @@ if __name__ == '__main__':
     valid_image_folder ="val"
     valid_label_folder = "val_label"
     log_filepath = 'log'
-    flag_multi_class = False
-    num_classes = 2
+    flag_multi_class = True
+    num_classes = 3
     dp = data_preprocess(train_path=train_path,image_folder=image_folder,label_folder=label_folder,
                          valid_path=valid_path,valid_image_folder=valid_image_folder,valid_label_folder=valid_label_folder,
                          flag_multi_class=flag_multi_class,
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     model = unet(num_class=num_classes)
 
     tb_cb = TensorBoard(log_dir=log_filepath)
-    model_checkpoint = keras.callbacks.ModelCheckpoint('weights/model_v3.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
+    model_checkpoint = keras.callbacks.ModelCheckpoint('weights/model_v2.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
     history = model.fit_generator(train_data,
                                   steps_per_epoch=200,epochs=30,
                                   validation_steps=20,
