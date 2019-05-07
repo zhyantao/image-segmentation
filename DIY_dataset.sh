@@ -11,4 +11,4 @@ cp data/original/images/0[7-8]* data/val
 cp data/original/labels/0[7-8]* data/val_label
 
 # Test data
-cp data/original/images/09* data/test
+cp data/original/images/090[0-9]* data/test
