@@ -16,7 +16,7 @@ pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trus
 
 ### Data Preprocess
 
-- Download [original data](https://pan.baidu.com/s/1vRBgHBudaplr4RNyVieaJw) to `seg-retinal/`. PWD: **2ba5**
+- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to `seg-retinal/`. PWD: **msla**
 
 - Make original dataset, run command:
 
@@ -48,7 +48,7 @@ python test.py
 python label_visualization.py
 ```
 
-## References:
+## References
 
 1. [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/) 
 2. [Deep-Learning Based, Automated Segmentation of Macular Edema in Optical Coherence Tomography](https://www.biorxiv.org/content/biorxiv/early/2017/05/09/135640.full.pdf)
