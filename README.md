@@ -36,15 +36,21 @@ pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trus
 
 ### Training model
 
-  `python train.py`
+```shell
+python train.py
+```
 
 ### Test model
 
-  `python test.py`
+```shell
+python test.py
+```
 
 ### Visualize the result
 
-  `python label_visualization.py`
+```shell
+python label_visualization.py
+```
 
 ## References
 
