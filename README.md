@@ -3,13 +3,13 @@
 ## Dependencies
 
 - CentOS 7
-
 - Python 3.6.5
-
+- [Python-tk](https://pkgs.org/download/python-tk)
 - Deploy the environment.
 
 ```shell
 pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+apt-get install python3-tk
 ```
 
 ## Usage
