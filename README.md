@@ -6,11 +6,10 @@
 - Python 3.6.5
 - [Python-tkinter](https://centos.pkgs.org/7/centos-sclo-rh-x86_64/rh-python36-python-tkinter-3.6.3-3.el7.x86_64.rpm.html)
 - Deploy the environment.
-
-```shell
-pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
-apt-get install python3-tk
-```
+    ```shell
+    pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+    apt-get install python3-tk
+    ```
 
 ## Usage
 
