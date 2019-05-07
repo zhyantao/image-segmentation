@@ -16,7 +16,7 @@ pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trus
 
 ### Data Preprocess
 
-- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to `seg-retinal/`. PWD: **msla**
+- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to `image-segmentation/`. PWD: **msla**
 
 - Make original dataset, run command:
 
