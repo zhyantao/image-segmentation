@@ -4,7 +4,7 @@
 
 - CentOS 7
 - Python 3.6.5
-- [Python-tk](https://pkgs.org/download/python-tk)
+- [Python-tkinter](https://centos.pkgs.org/7/centos-sclo-rh-x86_64/rh-python36-python-tkinter-3.6.3-3.el7.x86_64.rpm.html)
 - Deploy the environment.
 
 ```shell
