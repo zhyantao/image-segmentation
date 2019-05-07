@@ -16,6 +16,10 @@ pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trus
 
 ### Data Preprocess
 
+- Download source codes, run command:
+
+  `git clone https://github.com/toooney/image-segmentation.git`
+
 - Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to `image-segmentation/`. PWD: **msla**
 
 - Make original dataset, run command:
@@ -32,21 +36,15 @@ pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trus
 
 ### Training model
 
-```shell
-python train.py
-```
+  `python train.py`
 
 ### Test model
 
-```shell
-python test.py
-```
+  `python test.py`
 
 ### Visualize the result
 
-```shell
-python label_visualization.py
-```
+  `python label_visualization.py`
 
 ## References
 
