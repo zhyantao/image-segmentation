@@ -36,8 +36,13 @@ python test.py
 python label_visualization.py
 ```
 ## References
+
 1. [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/) 
 2. [Deep-Learning Based, Automated Segmentation of Macular Edema in Optical Coherence Tomography](https://www.biorxiv.org/content/biorxiv/early/2017/05/09/135640.full.pdf)
 3. [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation](https://arxiv.org/pdf/1511.00561v2.pdf)
 4. [Relationship Between a Systemic Inflammatory Marker, Plaque Inflammation, and Plaque Characteristics Determined by Intravascular Optical Coherence Tomography](https://www.ahajournals.org/doi/pdf/10.1161/ATVBAHA.107.145987)
 5. [preddy5/segnet](https://github.com/preddy5/segnet)
+
+## Results
+
+For more details, see [nohup.out](https://github.com/toooney/image-segmentation/blob/master/nohup.out)
