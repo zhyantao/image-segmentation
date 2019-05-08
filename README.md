@@ -24,14 +24,17 @@
 - DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:
   `sh DIY_dataset.sh`
 ### Training model
+
 ```shell
 python train.py
 ```
 ### Test model
+
 ```shell
 python test.py
 ```
-### Visualize the result
+### Visualizing the result
+
 ```shell
 python label_visualization.py
 ```
@@ -46,3 +49,9 @@ python label_visualization.py
 ## Results
 
 For more details, see [nohup.out](https://github.com/toooney/image-segmentation/blob/master/nohup.out)
+
+## Visualizing Learning
+
+```shell
+tensorboard --logdir=logs/
+```
