@@ -21,7 +21,7 @@ class LabelImage:
 		for h in range(0, image_array_height):
 			for w in range(0, image_array_width):
 				if w >= self.col_start and w <= self.col_end:
-					if image_array[h, w] < 60: # segmentation of vulnerable plaques and background thresholds
+					if image_array[h, w] < 90: # segmentation of vulnerable plaques and background thresholds
 						image_array[h, w] = 0 # background: Black
 					else:
 						image_array[h, w] = 1 # is label
