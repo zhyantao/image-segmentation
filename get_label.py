@@ -24,18 +24,18 @@ class GetLabel:
             else:
                 label_y_train = list_item[1].split('\n')[0]
             # label_x_train
-            flag = 0 # 防止两次对一张图片编辑，第二次编辑对第一次的编辑覆盖
-            col_start = 0 # 病变区域起始区
-            col_end = 0   # 病变区域终止区
+	    flag = 0      # prevent the second processing from covering the first result.
+            col_start = 0 # start edge of labels
+            col_end = 0   # end edge of labels
             if count < 1000:
                 for i in range(2, len_list_item):
                     # mask the image
-                    list_item_tmp = re.findall(r"\d+", list_item[i]) # 使用正则表达式去除\n https://zhidao.baidu.com/question/328905513600600605.html
+		    list_item_tmp = re.findall(r"\d+", list_item[i]) # use regular expression to remove \n
                     col_start = int(list_item_tmp[0])
                     col_end = int(list_item_tmp[1])
                     label_image = LabelImage(file_folder = label_image_folder, file_name = label_file_name, col_start = col_start, col_end = col_end, flag = flag)
                     label_image.labelImage()
-                    flag = col_end # 记录上一次修改末尾的数值，下一次不再修改前面的数值
+                    flag = col_end # refresh flag
             else:
                 label_image = LabelImage(file_folder = label_image_folder, file_name = label_file_name, col_start = col_start, col_end = col_end, flag = flag)
                 label_image.labelImage()
