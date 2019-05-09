@@ -24,13 +24,13 @@ class GetLabel:
             else:
                 label_y_train = list_item[1].split('\n')[0]
             # label_x_train
-	    flag = 0      # prevent the second processing from covering the first result.
+            flag = 0      # prevent the second processing from covering the first result.
             col_start = 0 # start edge of labels
             col_end = 0   # end edge of labels
             if count < 1000:
                 for i in range(2, len_list_item):
                     # mask the image
-		    list_item_tmp = re.findall(r"\d+", list_item[i]) # use regular expression to remove \n
+                    list_item_tmp = re.findall(r"\d+", list_item[i]) # use regular expression to remove \n
                     col_start = int(list_item_tmp[0])
                     col_end = int(list_item_tmp[1])
                     label_image = LabelImage(file_folder = label_image_folder, file_name = label_file_name, col_start = col_start, col_end = col_end, flag = flag)
