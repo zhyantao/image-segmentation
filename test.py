@@ -14,7 +14,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def image_normalized(file_path):
     '''
-    png, size:720*64，grayscale
+    png, size: 64*720，grayscale
     :param dir_path: path to your images directory
     :return:
     '''

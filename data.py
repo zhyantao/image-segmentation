@@ -10,9 +10,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 color_label = [255, 255, 255]
-color_nlabel = [100, 100, 100]
+color_nlabel = [128, 128, 128]
 color_background = [0, 0, 0]
-color_pipe = [150, 150, 150]
 COLOR_DICT = np.array([color_label, color_nlabel, color_background])
 
 
