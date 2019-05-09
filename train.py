@@ -27,7 +27,7 @@ if __name__ == '__main__':
     valid_label_folder = "val_label"
     log_filepath = 'log'
     flag_multi_class = True
-    num_classes = 3
+    num_classes = 4
     dp = data_preprocess(train_path=train_path,image_folder=image_folder,label_folder=label_folder,
                          valid_path=valid_path,valid_image_folder=valid_image_folder,valid_label_folder=valid_label_folder,
                          flag_multi_class=flag_multi_class,
