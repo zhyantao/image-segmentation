@@ -9,9 +9,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-color_label = [1, 1, 1]
-color_nlabel = [2, 2, 2]
+color_label = [255, 255, 255]
+color_nlabel = [100, 100, 100]
 color_background = [0, 0, 0]
+color_pipe = [150, 150, 150]
 COLOR_DICT = np.array([color_label, color_nlabel, color_background])
 
 
@@ -19,7 +20,7 @@ class data_preprocess:
     def __init__(self, train_path=None, image_folder=None, label_folder=None,
                  valid_path=None,valid_image_folder =None,valid_label_folder = None,
                  test_path=None, save_path=None,
-                 img_rows=512, img_cols=512,
+                 img_rows=64, img_cols=720,
                  flag_multi_class=True,
                  num_classes = 3):
         self.img_rows = img_rows
@@ -45,7 +46,7 @@ class data_preprocess:
 
         self.flag_multi_class = flag_multi_class
         self.num_class = num_classes
-        self.target_size = (512, 512)
+        self.target_size = (self.img_rows, self.img_cols)
         self.img_type = 'png'
 
     def adjustData(self, img, label):
