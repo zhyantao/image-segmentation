@@ -22,16 +22,16 @@ class LabelImage:
             for h in range(0, image_array_height):
                 if w >= self.col_start and w <= self.col_end:
                     if image_array[h, w] < 90:  # segmentation of vulnerable plaques and background thresholds
-                        image_array[h, w] = 0   # background: Black
+                        image_array[h, w] = 2   # background: Black
                     else:
-                        image_array[h, w] = 255 # is label
+                        image_array[h, w] = 0 # is label
                 elif w >= self.flag:
                     if image_array[h, w] < 60:  # segmentation of vulnerable plaques and background thresholds
-                        image_array[h, w] = 0   # background: Black
+                        image_array[h, w] = 2   # background: Black
                     else:
-                        image_array[h, w] = 128 # is NOT label
+                        image_array[h, w] = 1  # is NOT label
         label_image = Image.fromarray(np.uint8(image_array))
         # save labeled image
         label_image.save(os.path.join(self.file_folder, os.path.basename(self.file_name)))
-        print(' Processing picture', self.file_name, '.')
+        print('\r Processing picture {}'.format(self.file_name), end='')
 
