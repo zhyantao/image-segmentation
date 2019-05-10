@@ -18,20 +18,20 @@ class LabelImage:
         image_array = np.array(image)
         image_array_height = image_array.shape[0]
         image_array_width = image_array.shape[1]
-        for w in range(0, image_array_width):
+        for w in range(self.flag, image_array_width):
             for h in range(0, image_array_height):
-                if w >= self.col_start and w <= self.col_end:
-                    if image_array[h, w] < 90:  # segmentation of vulnerable plaques and background thresholds
-                        image_array[h, w] = 2   # background: Black
+                if w >= self.col_start-1 and w <= self.col_end-1 and int(self.file_name.split('.')[0]) <= 1000:
+                    if image_array[h, w] < 90:  # vulnerable plaques thresholds
+                        image_array[h, w] = 0 # background
                     else:
-                        image_array[h, w] = 0 # is label
-                elif w >= self.flag:
-                    if image_array[h, w] < 60:  # segmentation of vulnerable plaques and background thresholds
-                        image_array[h, w] = 2   # background: Black
+                        image_array[h, w] = 127 # is label
+                else:
+                    if image_array[h, w] < 60:  # unvulnerable plaques thresholds
+                        image_array[h, w] = 0  # background
                     else:
-                        image_array[h, w] = 1  # is NOT label
+                        image_array[h, w] = 254  # is NOT label
         label_image = Image.fromarray(np.uint8(image_array))
         # save labeled image
         label_image.save(os.path.join(self.file_folder, os.path.basename(self.file_name)))
         print('\r Processing picture {}'.format(self.file_name), end='')
-
+        return label_image
