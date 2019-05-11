@@ -10,9 +10,9 @@ import warnings
 warnings.filterwarnings("ignore")
 
 color_label = [255, 255, 255]
-color_nlabel = [128, 128, 128]
+color_nlabel = [127, 127, 127]
 color_background = [0, 0, 0]
-COLOR_DICT = np.array([color_label, color_nlabel, color_background])
+COLOR_DICT = np.array([color_background, color_label, color_nlabel])
 
 
 class data_preprocess:
@@ -49,12 +49,13 @@ class data_preprocess:
         self.img_type = 'png'
 
     def adjustData(self, img, label):
+        #print('label[0]:', label[:,:,0])
         if (self.flag_multi_class):
             img = img / 255.
             label = label[:, :, :, 0] if (len(label.shape) == 4) else label[:, :, 0]
             new_label = np.zeros(label.shape + (self.num_class,))
             for i in range(self.num_class):
-                new_label[label == i, i] = 1
+                new_label[label == i, i] = i#1
             label = new_label
         elif (np.max(img) > 1):
             img = img / 255.
