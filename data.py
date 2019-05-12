@@ -55,7 +55,7 @@ class data_preprocess:
             label = label[:, :, :, 0] if (len(label.shape) == 4) else label[:, :, 0]
             new_label = np.zeros(label.shape + (self.num_class,))
             for i in range(self.num_class):
-                new_label[label == i, i] = i#1
+                new_label[label == i, i] = 1
             label = new_label
         elif (np.max(img) > 1):
             img = img / 255.
