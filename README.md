@@ -1,5 +1,7 @@
 # OCT Image Segmentation
 
+[![Build Status](https://travis-ci.org/toooney/image-segmentation.svg?branch=master)](https://travis-ci.org/toooney/image-segmentation)
+
 ## Dependencies
 
 - CentOS 7
