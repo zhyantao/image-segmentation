@@ -34,8 +34,8 @@ if __name__ == '__main__':
                          num_classes=num_classes)
 
     # train your own model
-    train_data = dp.trainGenerator(batch_size=2)
-    valid_data = dp.validLoad(batch_size=2)
+    train_data = dp.trainGenerator(batch_size=32)
+    valid_data = dp.validLoad(batch_size=32)
     test_data = dp.testGenerator()
     model = unet(num_class=num_classes)
 
