@@ -6,6 +6,7 @@ from data import *
 import os
 import keras
 from keras.callbacks import TensorBoard
+from keras.callbacks import EarlyStopping
 import tensorflow as tf
 import keras.backend.tensorflow_backend as K
 import matplotlib.pyplot as plt
@@ -34,18 +35,19 @@ if __name__ == '__main__':
                          num_classes=num_classes)
 
     # train your own model
-    train_data = dp.trainGenerator(batch_size=32)
-    valid_data = dp.validLoad(batch_size=32)
+    train_data = dp.trainGenerator(batch_size=16)
+    valid_data = dp.validLoad(batch_size=16)
     test_data = dp.testGenerator()
     model = unet(num_class=num_classes)
 
     tb_cb = TensorBoard(log_dir=log_filepath)
     model_checkpoint = keras.callbacks.ModelCheckpoint('weights/model_v2.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
+    early_stopping_monitor = EarlyStopping(patience=3)
     history = model.fit_generator(train_data,
                                   steps_per_epoch=200,epochs=30,
                                   validation_steps=20,
                                   validation_data=valid_data,
-                                  callbacks=[model_checkpoint,tb_cb])
+                                  callbacks=[model_checkpoint,tb_cb,early_stopping_monitor])
 
     # draw the loss and accuracy curve
     plt.figure(12, figsize=(6, 6), dpi=60)
