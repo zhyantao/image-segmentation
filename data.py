@@ -65,7 +65,7 @@ class data_preprocess:
         return (img, label)
 
     def trainGenerator(self, batch_size, image_save_prefix="image", label_save_prefix="label",
-                       save_to_dir="trainGen", seed=7):
+                       save_to_dir=None, seed=7):
         '''
         can generate image and label at the same time
         use the same seed for image_datagen and label_datagen to ensure the transformation for image and label is the same
