@@ -5,6 +5,7 @@
 # Trian data
 if [ "`ls data/train/`" = "" ]
 then
+	cp data/original/images/[0-1][0-6]* data/train
 	echo 'Please run command `sh make_dataset.sh` first.'
 else
 	rm data/train/*
@@ -13,7 +14,8 @@ else
 fi
 if [ "`ls data/train_label/`" = ""  ]
 then
-	echo 'Please run command `sh make_dataset.sh` first.'
+	cp data/original/labels/[0-1][0-6]* data/train_label
+	echo 'Copy tarin_label data complete.'
 else
 	rm data/train_label/*
 	cp data/original/labels/[0-1][0-6]* data/train_label
@@ -27,7 +29,8 @@ then
 	cp data/original/images/[0-1][7-8]* data/val
 	echo 'Copy val data complete.'
 else
-	echo 'Please run command `sh make_dataset.sh` first.'
+	cp data/original/images/[0-1][7-8]* data/val
+	echo 'Copy val data complete.'
 fi
 if [ "`ls data/val_label/`" != "" ]
 then
@@ -35,7 +38,8 @@ then
 	cp data/original/labels/[0-1][7-8]* data/val_label
 	echo 'Copy val_label complete.'
 else
-	echo 'Please run command `sh make_dataset.sh` first.'
+	cp data/original/labels/[0-1][7-8]* data/val_label
+	echo 'Copy val_label complete.'
 fi
 
 # Test data
@@ -45,7 +49,8 @@ then
 	cp data/original/images/[0-1]90[0-9]* data/test
 	echo 'Copy test data complete.'
 else
-	echo 'Please run command `sh make_dataset.sh` first.'
+	cp data/original/images/[0-1]90[0-9]* data/test
+	echo 'Copy test data complete.'
 fi
 
 if [ -f file_rename.py ]
