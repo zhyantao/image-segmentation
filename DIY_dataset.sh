@@ -6,7 +6,7 @@
 if [ "`ls data/train/`" = "" ]
 then
 	cp data/original/images/[0-1][0-6]* data/train
-	echo 'Please run command `sh make_dataset.sh` first.'
+	echo 'Copy tarin data complete.'
 else
 	rm data/train/*
 	cp data/original/images/[0-1][0-6]* data/train
