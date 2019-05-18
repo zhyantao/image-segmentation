@@ -14,14 +14,14 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def image_normalized(file_path):
     '''
-    png, size: 720*64，grayscale
+    png, size: 512*64，grayscale
     :param dir_path: path to your images directory
     :return:
     '''
     img = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
     img_shape = img.shape
     image_size = (img_shape[1],img_shape[0])
-    img_standard = cv2.resize(img, (720, 64), interpolation=cv2.INTER_CUBIC)
+    img_standard = cv2.resize(img, (512, 64), interpolation=cv2.INTER_CUBIC)
     img_new = img_standard
     img_new = np.asarray([img_new / 255.])
     img_new = img_new[:, :, :, np.newaxis] # add 1 dimension

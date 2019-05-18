@@ -19,7 +19,7 @@ class data_preprocess:
     def __init__(self, train_path=None, image_folder=None, label_folder=None,
                  valid_path=None,valid_image_folder =None,valid_label_folder = None,
                  test_path=None, save_path=None,
-                 img_rows=64, img_cols=720,
+                 img_rows=64, img_cols=512,
                  flag_multi_class=True,
                  num_classes = 3):
         self.img_rows = img_rows
