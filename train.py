@@ -1,7 +1,7 @@
 #encoding:utf-8
 #!/usr/bin/env python3
 
-from model_v2 import  *
+from model_v3 import  *
 from data import *
 import os
 import keras
@@ -36,15 +36,15 @@ if __name__ == '__main__':
 
     # train your own model
     train_data = dp.trainGenerator(batch_size=32)
-    valid_data = dp.validLoad(batch_size=32)
+    valid_data = dp.validLoad(batch_size=16)
     test_data = dp.testGenerator()
     model = unet(num_class=num_classes)
 
     tb_cb = TensorBoard(log_dir=log_filepath)
-    model_checkpoint = keras.callbacks.ModelCheckpoint('weights/model_v2.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
+    model_checkpoint = keras.callbacks.ModelCheckpoint('weights/model_v3.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
     early_stopping_monitor = EarlyStopping(patience=3)
     history = model.fit_generator(train_data,
-                                  steps_per_epoch=200,epochs=30,
+                                  steps_per_epoch=200,epochs=300,
                                   validation_steps=20,
                                   validation_data=valid_data,
                                   callbacks=[model_checkpoint,tb_cb,early_stopping_monitor])

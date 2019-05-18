@@ -2,7 +2,7 @@ from keras.models import *
 from keras.layers import *
 from keras.optimizers import *
 
-IMG_SIZE_Width = 720  # cols
+IMG_SIZE_Width = 512  # cols
 IMG_SIZE_Height = 64  # rows
 
 def unet(pretrained_weights=None, input_size=(IMG_SIZE_Height, IMG_SIZE_Width, 1),num_class=2):
