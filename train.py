@@ -9,7 +9,6 @@ from keras.callbacks import TensorBoard
 from keras.callbacks import EarlyStopping
 import tensorflow as tf
 import keras.backend.tensorflow_backend as K
-import matplotlib.pyplot as plt
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth=True
@@ -48,19 +47,3 @@ if __name__ == '__main__':
                                   validation_steps=20,
                                   validation_data=valid_data,
                                   callbacks=[model_checkpoint,tb_cb,early_stopping_monitor])
-
-    # draw the loss and accuracy curve
-    plt.figure(12, figsize=(6, 6), dpi=60)
-    plt.subplot(211)
-    plt.plot(history.history['loss'], label='train')
-    plt.plot(history.history['val_loss'], label='val')
-    plt.title('loss')
-    plt.legend()
-
-    plt.subplot(212)
-    plt.plot(history.history['acc'], label='train')
-    plt.plot(history.history['val_acc'], label='val')
-    plt.title('acc')
-    plt.legend()
-
-    plt.show()
