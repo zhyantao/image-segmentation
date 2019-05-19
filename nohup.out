@@ -3185,15 +3185,3 @@ Epoch 15/300
 200/200 [==============================] - 3865s 19s/step - loss: 0.0693 - acc: 0.9139 - val_loss: 0.1082 - val_acc: 0.8905
 
 Epoch 00015: val_loss did not improve from 0.09103
-Traceback (most recent call last):
-  File "train.py", line 53, in <module>
-    plt.figure(12, figsize=(6, 6), dpi=60)
-  File "/usr/local/lib/python3.6/site-packages/matplotlib/pyplot.py", line 525, in figure
-    **kwargs)
-  File "/usr/local/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 3218, in new_figure_manager
-    return cls.new_figure_manager_given_figure(num, fig)
-  File "/usr/local/lib/python3.6/site-packages/matplotlib/backends/_backend_tk.py", line 1008, in new_figure_manager_given_figure
-    window = Tk.Tk(className="matplotlib")
-  File "/usr/local/lib/python3.6/tkinter/__init__.py", line 2020, in __init__
-    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
-_tkinter.TclError: couldn't connect to display "0.0.0.0:10.0"
