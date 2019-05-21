@@ -41,9 +41,9 @@ if __name__ == '__main__':
 
     tb_cb = TensorBoard(log_dir=log_filepath)
     model_checkpoint = keras.callbacks.ModelCheckpoint('weights/model_v3.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
-    early_stopping_monitor = EarlyStopping(patience=3)
+    #early_stopping_monitor = EarlyStopping(patience=10)
     history = model.fit_generator(train_data,
                                   steps_per_epoch=200,epochs=300,
                                   validation_steps=20,
                                   validation_data=valid_data,
-                                  callbacks=[model_checkpoint,tb_cb,early_stopping_monitor])
+                                  callbacks=[model_checkpoint,tb_cb])#,early_stopping_monitor])
