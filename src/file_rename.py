@@ -15,4 +15,4 @@ def file_rename(FilePath, Folders):
 if __name__ == '__main__':
     
     folders = ['train', 'train_label', 'val', 'val_label']
-    file_rename('data/', folders)
+    file_rename('../data/', folders)
