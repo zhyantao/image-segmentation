@@ -19,6 +19,7 @@
 - Download source codes, run command:
   `git clone https://github.com/toooney/image-segmentation.git`
 - Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to `image-segmentation/`. PWD: **msla**
+- Change directory to `image-segmentation/src/`
 - Make original dataset, run command:
   `sh make_dataset.sh`  
 - Data preprocess, run command:
@@ -28,16 +29,19 @@
 ### Training model
 
 ```shell
+cd image-segmentation/src/
 python train.py
 ```
 ### Test model
 
 ```shell
+cd image-segmentation/src/
 python test.py
 ```
 ### Visualizing the result
 
 ```shell
+cd image-segmentation/src/
 python label_visualization.py
 ```
 ## References
@@ -55,5 +59,6 @@ For more details, see [nohup.out](https://github.com/toooney/image-segmentation/
 ## Visualizing Learning
 
 ```shell
-tensorboard --logdir=logs/
+cd image-segmentation/src/
+tensorboard --logdir=../logs/
 ```

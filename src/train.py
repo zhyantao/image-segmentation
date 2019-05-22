@@ -19,13 +19,13 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 if __name__ == '__main__':
 
     #path to images which are prepared to train a model
-    train_path = "data"
+    train_path = "../data"
     image_folder = "train"
     label_folder = "train_label"
-    valid_path =  "data"
+    valid_path =  "../data"
     valid_image_folder ="val"
     valid_label_folder = "val_label"
-    log_filepath = 'log'
+    log_filepath = '../log'
     flag_multi_class = True
     num_classes = 3
     dp = data_preprocess(train_path=train_path,image_folder=image_folder,label_folder=label_folder,
@@ -40,10 +40,10 @@ if __name__ == '__main__':
     model = unet(num_class=num_classes)
 
     tb_cb = TensorBoard(log_dir=log_filepath)
-    model_checkpoint = keras.callbacks.ModelCheckpoint('weights/model_v3.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
-    #early_stopping_monitor = EarlyStopping(patience=10)
+    model_checkpoint = keras.callbacks.ModelCheckpoint('../weights/model_v3.hdf5', monitor='val_loss',verbose=1,save_best_only=True)
+    early_stopping_monitor = EarlyStopping(patience=3)
     history = model.fit_generator(train_data,
                                   steps_per_epoch=200,epochs=300,
                                   validation_steps=20,
                                   validation_data=valid_data,
-                                  callbacks=[model_checkpoint,tb_cb])#,early_stopping_monitor])
+                                  callbacks=[model_checkpoint,tb_cb,early_stopping_monitor])

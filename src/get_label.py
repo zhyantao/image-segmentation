@@ -6,7 +6,7 @@ from PIL import Image
 import os
 from label_image import LabelImage
 
-label_image_folder = 'data/original/labels/'
+label_image_folder = '../data/original/labels/'
 
 class GetLabel:
     def __init__(self, file_folder, file_name):

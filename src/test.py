@@ -31,15 +31,15 @@ def image_normalized(file_path):
 if __name__ == '__main__':
 
     #path to images which aring wating for predicting
-    test_path = "data/test/"
+    test_path = "../data/test/"
 
     # save the predict images
-    save_path = "data/predict/"
+    save_path = "../data/predict/"
 
     dp = data_preprocess(test_path=test_path,save_path=save_path,flag_multi_class=True,num_classes=3)
 
     #load model
-    model = load_model('weights/model_v3.hdf5')
+    model = load_model('../weights/model_v3.hdf5')
 
     for name in os.listdir(test_path):
         image_path = os.path.join(test_path,name)
