@@ -9,7 +9,7 @@
 - [Python-tkinter](https://centos.pkgs.org/7/centos-sclo-rh-x86_64/rh-python36-python-tkinter-3.6.3-3.el7.x86_64.rpm.html)
 - Deploy the environment.
   ```shell
-  # pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+  pip install -r requirements.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
   ```
 
 ## Usage
@@ -29,20 +29,20 @@
 ### Training model
 
 ```shell
-# cd image-segmentation/src/
-# python train.py
+cd image-segmentation/src/
+python train.py
 ```
 ### Test model
 
 ```shell
-# cd image-segmentation/src/
-# python test.py
+cd image-segmentation/src/
+python test.py
 ```
 ### Visualizing the result
 
 ```shell
-# cd image-segmentation/src/
-# python label_visualization.py
+cd image-segmentation/src/
+python label_visualization.py
 ```
 ## References
 
@@ -59,6 +59,6 @@ For more details, see [nohup.out](https://github.com/toooney/image-segmentation/
 ## Visualizing Learning
 
 ```shell
-# cd image-segmentation/src/
-# tensorboard --logdir=../logs/
+cd image-segmentation/src/
+tensorboard --logdir=../logs/
 ```
