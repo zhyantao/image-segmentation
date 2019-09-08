@@ -23,10 +23,10 @@
   `cd image-segmentation/src/`
 - Make original dataset, run command:  
   `sh make_dataset.sh`  
-- DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:  
-  `sh DIY_dataset.sh`
 - Data preprocess, run command:  
   `python data_preprocess.py`  
+- DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:  
+  `sh DIY_dataset.sh`
   
 ### Training model
 
