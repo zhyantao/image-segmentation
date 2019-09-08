@@ -16,11 +16,11 @@
 
 ### Data Preprocess
 
-- Download source codes, run command:
+- Download source codes, run command:  
   `git clone https://github.com/zhyantao/image-segmentation.git`
-- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to the directory `image-segmentation/`. (PASSWORD: **msla**)
+- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to the directory **image-segmentation/**. (PASSWORD: **msla**)
 - Change directory:  
-  `image-segmentation/src/`
+  `cd image-segmentation/src/`
 - Make original dataset, run command:  
   `sh make_dataset.sh`  
 - DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:  
