@@ -31,19 +31,16 @@
 ### Training model
 
 ```shell
-cd image-segmentation/src/
 python train.py
 ```
 ### Test model
 
 ```shell
-cd image-segmentation/src/
 python test.py
 ```
 ### Visualizing the result
 
 ```shell
-cd image-segmentation/src/
 python label_visualization.py
 ```
 ## References
@@ -61,6 +58,5 @@ For more details, see [nohup.out](https://github.com/toooney/image-segmentation/
 ## Visualizing Learning
 
 ```shell
-cd image-segmentation/src/
 tensorboard --logdir=../logs/
 ```
