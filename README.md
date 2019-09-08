@@ -18,14 +18,16 @@
 
 - Download source codes, run command:
   `git clone https://github.com/zhyantao/image-segmentation.git`
-- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to `image-segmentation/`. PWD: **msla**
-- Change directory to `image-segmentation/src/`
-- Make original dataset, run command:
+- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to the directory `image-segmentation/`. (PASSWORD: **msla**)
+- Change directory:  
+  `image-segmentation/src/`
+- Make original dataset, run command:  
   `sh make_dataset.sh`  
-- Data preprocess, run command:
-  `python data_preprocess.py`  
-- DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:
+- DIY your dataset, open `DIY_dataset.sh` and modify the number of images you wanna to train and valid, then run command:  
   `sh DIY_dataset.sh`
+- Data preprocess, run command:  
+  `python data_preprocess.py`  
+  
 ### Training model
 
 ```shell
