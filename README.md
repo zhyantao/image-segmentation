@@ -1,4 +1,4 @@
-# OCT Image Segmentation
+# Invascular OCT Image Segmentation
 
 [![Build Status](https://travis-ci.org/zhyantao/image-segmentation.svg?branch=master)](https://travis-ci.org/zhyantao/image-segmentation)
 
