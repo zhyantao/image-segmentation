@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/zhyantao/image-segmentation.svg?branch=master)](https://travis-ci.org/zhyantao/image-segmentation)
 
+## Architecture
+
+[Architecture of U-net](./U-net.pdf)
+
 ## Dependencies
 
 - CentOS 7
