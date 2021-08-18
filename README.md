@@ -22,7 +22,7 @@
 
 - Download source codes, run command:  
   `git clone https://github.com/zhyantao/image-segmentation.git`
-- Download [original data](https://pan.baidu.com/s/1WRdH2HjVpIi6cjRVHrhO8Q) to the directory **image-segmentation/**. (PASSWORD: **msla**)
+- Download [TrainData.tar.gz](https://zhyantao.lanzoui.com/igVZust1bti) to the directory **image-segmentation/**. (PASSWORD: **msla**)
 - Change directory:  
   `cd image-segmentation/src/`
 - Make original dataset, run command:  
